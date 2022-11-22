@@ -20,7 +20,7 @@
   <meta content="Zhenliang&#39;Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1660882932030" as="style">
+  <link rel="preload" href="/css/style.css?time=1669091729629" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/Zhenliang-G/Blog_img/albb_font/otf/AlibabaPuHuiTi-2-55-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1790,8 +1790,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1660882932030" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1660882932030"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1669091729629" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1669091729629"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1868,9 +1868,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1660882932030","sites":"/js/plugins/sites.js?time=1660882932030","friends":"/js/plugins/friends.js?time=1660882932030","parallax":"/js/plugins/parallax.js?time=1660882932030","rightMenu":"/js/plugins/rightMenu.js?time=1660882932030","contributors":"/js/plugins/contributors.js?time=1660882932030","message":"/js/thirdparty/message.js?time=1660882932030","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1660882932030","search":"/js/search/hexo.js?time=1660882932030"},"css":{"style":"/css/style.css?time=1660882932030","message":"/css/message.css?time=1660882932030"}},
+    cdn: {"js":{"app":"/js/app.js?time=1669091729629","sites":"/js/plugins/sites.js?time=1669091729629","friends":"/js/plugins/friends.js?time=1669091729629","parallax":"/js/plugins/parallax.js?time=1669091729629","rightMenu":"/js/plugins/rightMenu.js?time=1669091729629","contributors":"/js/plugins/contributors.js?time=1669091729629","message":"/js/thirdparty/message.js?time=1669091729629","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1669091729629","search":"/js/search/hexo.js?time=1669091729629"},"css":{"style":"/css/style.css?time=1669091729629","message":"/css/message.css?time=1669091729629"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Fri Aug 19 2022 12:22:12 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Tue Nov 22 2022 12:35:29 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","donate"],
       for_post: ["toc"],
@@ -2678,9 +2678,82 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.zlgan.top/2022/11/22/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Zhenliang'Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Zhenliang'Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/11/22/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/"  itemprop="url">
+        持续学习
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        持续学习半监督
+利用labeled data训练一个模型
+利用训练好的模型，对unlabled data进行predict，得到标注，称为pseudo label
+从pseudo label中选取一些样本，放入labelled data中。选取方法自定义，比如放入置信度比较高
+重新训练模型，然后继续迭代。
+
+life long learning
+先学A再学B会遗忘之前学到的A
+两个同时扔进去...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-11-22T12:34:05+08:00">2022-11-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">机器学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/11/22/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3265,6 +3338,11 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
             active-action="action-categoriesE681B6E6848FE4BBA3E7A081E998B2E88C83"
             ><div class='name'>恶意代码防范</div><div class='badge'>(1)</div></a></li>
         
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categoriesE69CBAE599A8E5ADA6E4B9A0"
+            ><div class='name'>机器学习</div><div class='badge'>(1)</div></a></li>
+        
       </ul>
     </div>
   </section>
@@ -3287,7 +3365,7 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
 
 
     <div class='content'>
-      <a href="/tags/ANN/" style="font-size: 14px; color: #999">ANN</a> <a href="/tags/Anomaly-Detection/" style="font-size: 24px; color: #555">Anomaly Detection</a> <a href="/tags/BM%E8%B5%84%E8%B4%A8/" style="font-size: 14px; color: #999">BM资质</a> <a href="/tags/CNN/" style="font-size: 14px; color: #999">CNN</a> <a href="/tags/Flame/" style="font-size: 14px; color: #999">Flame</a> <a href="/tags/KNN/" style="font-size: 19px; color: #777">KNN</a> <a href="/tags/SM%E9%9B%86%E6%88%90%E8%B5%84%E8%B4%A8/" style="font-size: 14px; color: #999">SM集成资质</a> <a href="/tags/%E4%BF%9D%E5%AF%86/" style="font-size: 19px; color: #777">保密</a> <a href="/tags/%E5%88%86%E7%BA%A7%E4%BF%9D%E6%8A%A4/" style="font-size: 14px; color: #999">分级保护</a> <a href="/tags/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E9%98%B2%E8%8C%83/" style="font-size: 14px; color: #999">恶意代码防范</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/%E7%81%AB%E7%84%B0/" style="font-size: 14px; color: #999">火焰</a> <a href="/tags/%E7%97%85%E6%AF%92/" style="font-size: 14px; color: #999">病毒</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" style="font-size: 14px; color: #999">等级保护</a>
+      <a href="/tags/ANN/" style="font-size: 14px; color: #999">ANN</a> <a href="/tags/Anomaly-Detection/" style="font-size: 20.67px; color: #6c6c6c">Anomaly Detection</a> <a href="/tags/BM%E8%B5%84%E8%B4%A8/" style="font-size: 14px; color: #999">BM资质</a> <a href="/tags/CNN/" style="font-size: 14px; color: #999">CNN</a> <a href="/tags/Flame/" style="font-size: 14px; color: #999">Flame</a> <a href="/tags/KNN/" style="font-size: 17.33px; color: #828282">KNN</a> <a href="/tags/SM%E9%9B%86%E6%88%90%E8%B5%84%E8%B4%A8/" style="font-size: 14px; color: #999">SM集成资质</a> <a href="/tags/%E4%BF%9D%E5%AF%86/" style="font-size: 17.33px; color: #828282">保密</a> <a href="/tags/%E5%88%86%E7%BA%A7%E4%BF%9D%E6%8A%A4/" style="font-size: 14px; color: #999">分级保护</a> <a href="/tags/%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E9%98%B2%E8%8C%83/" style="font-size: 14px; color: #999">恶意代码防范</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">机器学习</a> <a href="/tags/%E7%81%AB%E7%84%B0/" style="font-size: 14px; color: #999">火焰</a> <a href="/tags/%E7%97%85%E6%AF%92/" style="font-size: 14px; color: #999">病毒</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4/" style="font-size: 14px; color: #999">等级保护</a> <a href="/tags/%E7%BB%88%E7%94%9F%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">终生学习</a>
     </div>
   </section>
 
@@ -3312,7 +3390,7 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>7 篇</div>
+          <div>8 篇</div>
         </div>
       
 
@@ -3327,7 +3405,7 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>15.2k 字</div>
+          <div>15.8k 字</div>
         </div>
       
 
@@ -3352,7 +3430,7 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-08-19 日</div> 
+          <div id="last-update-show">2022-11-22 日</div> 
         </div>
       
     </div>
@@ -3510,7 +3588,7 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1660882932030.js"></script>
+<script src="/js/app.js?time=1669091729629.js"></script>
 
 
 
@@ -3627,7 +3705,7 @@ Dataloder.py123456789101112131415161718192021222324252627282930313233343536373..
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1660882932030')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1669091729629')</script>
 
 
 
@@ -3756,19 +3834,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1660882932030")
+        volantis.js("/js/plugins/sites.js?time=1669091729629")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1660882932030")
+        volantis.js("/js/plugins/friends.js?time=1669091729629")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1660882932030")
+        volantis.js("/js/plugins/contributors.js?time=1669091729629")
       }
     
   };
@@ -3881,7 +3959,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       VolantisFancyBox.bind('#valine_container .vcontent img:not(.vemoji)');
     }
   }
-  volantis.js('https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1660882932030').then(pjax_valine)
+  volantis.js('https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1669091729629').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3901,7 +3979,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1660882932030");
+    return volantis.js("/js/search/hexo.js?time=1669091729629");
   }
 
   function loadSearchService() {
@@ -4220,7 +4298,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1660882932030').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1669091729629').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>持续学习</title>
+      <link href="/2022/11/22/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2022/11/22/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="持续学习"><a href="#持续学习" class="headerlink" title="持续学习"></a>持续学习</h1><h3 id="半监督"><a href="#半监督" class="headerlink" title="半监督"></a>半监督</h3><ol><li>利用labeled data训练一个模型</li><li>利用训练好的模型，对unlabled data进行predict，得到标注，称为pseudo label</li><li>从pseudo label中选取一些样本，放入labelled data中。选取方法自定义，比如<strong>放入置信度比较高</strong></li><li>重新训练模型，然后继续迭代。</li></ol><h3 id="life-long-learning"><a href="#life-long-learning" class="headerlink" title="life long learning"></a>life long learning</h3><p><img src="D:/gzl_Blog/source/image/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/image-20221103223647387.png" class="lazyload" data-srcset="D:/gzl_Blog/source/image/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0/image-20221103223647387.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20221103223647387"></p><p>先学A再学B会遗忘之前学到的A</p><p>两个同时扔进去学习可以解决准确率问题，但是海量数据同时存储（前999个任务的数据+当前任务数据）不现实，存储量大，计算量大。</p><h4 id="解决方法1-EWC（Elastic-Weight-Consolidation）"><a href="#解决方法1-EWC（Elastic-Weight-Consolidation）" class="headerlink" title="解决方法1 EWC（Elastic Weight Consolidation）"></a>解决方法1 EWC（Elastic Weight Consolidation）</h4><p><img src="https://pic4.zhimg.com/v2-67f68fcbe3ddbb46befaebe8a3ca786b_r.jpg" class="lazyload" data-srcset="https://pic4.zhimg.com/v2-67f68fcbe3ddbb46befaebe8a3ca786b_r.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p><p>bi为参数更新权重，表示参数θi有多重要，能不能变化太多</p><p>核心思路：保持对原来任务很重要的参数，只改变对原来任务影响不大的参数</p><h5 id="bi怎么得到"><a href="#bi怎么得到" class="headerlink" title="bi怎么得到"></a>bi怎么得到</h5><p>EWC利用二阶导数来确定bi。如果二阶导数比较小，位于一个平坦的盆地中，则表明参数变化对task影响小，此时bi小。如果二阶导数比较大，位于一个狭小的山谷中，则表明参数变化对task影响大，此时bi大。</p><h4 id="解决方法2-生成样本"><a href="#解决方法2-生成样本" class="headerlink" title="解决方法2 生成样本"></a>解决方法2 生成样本</h4><p>在学习task2时，我们可以利用生成模型，生成task1的样本。然后利用task1和task2的样本，进行多任务学习，使得模型在两个task上均表现很好。</p><p>难点在于，生成样本，特别是复杂的样本，目前难度是很大的。</p><h4 id="解决方法3-Knowledge-Transfer-知识迁移"><a href="#解决方法3-Knowledge-Transfer-知识迁移" class="headerlink" title="解决方法3 Knowledge Transfer 知识迁移"></a>解决方法3 Knowledge Transfer 知识迁移</h4><p>迁移学习只关注迁移后模型在target task上要表现好，至于source task则不关心。</p><p>终生学习则需要模型在两个task上都表现好，不能出现遗忘。</p><p>将终生学习理解为更严格的迁移学习。</p><h4 id="解决方法4-Model-Expansion-模型扩张"><a href="#解决方法4-Model-Expansion-模型扩张" class="headerlink" title="解决方法4 Model Expansion 模型扩张"></a>解决方法4 Model Expansion 模型扩张</h4><h5 id="方法一-progressive-neural-network"><a href="#方法一-progressive-neural-network" class="headerlink" title="方法一 progressive neural network"></a>方法一 progressive neural network</h5><p><img src="https://pic1.zhimg.com/80/v2-40102a99cd155c1c27d11c0a4dac3a88_720w.webp" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-40102a99cd155c1c27d11c0a4dac3a88_720w.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p><p>将task1每层输出的feature，作为task2对应层的输入</p><h5 id="方法二-Net2Net"><a href="#方法二-Net2Net" class="headerlink" title="方法二 Net2Net"></a>方法二 Net2Net</h5><p>对网络进行加宽</p><p>由神经元h2分裂得到一个神经元h3</p><p><img src="https://pic1.zhimg.com/80/v2-f591839a3543b341c152ad6402e38950_720w.webp" class="lazyload" data-srcset="https://pic1.zhimg.com/80/v2-f591839a3543b341c152ad6402e38950_720w.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p><p>h2和h3权重均为之前h2权重的一半</p><p>在h3上添加一些小噪声，使二者能够独立更新。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 终生学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>国内现有的BM资质或标准（三大类：军工BM资质、SM集成资质和机关单位自查自评工作守则）</title>
       <link href="/2022/04/26/%E5%9B%BD%E5%86%85%E7%8E%B0%E6%9C%89%E7%9A%84BM%E8%B5%84%E8%B4%A8%E6%88%96%E6%A0%87%E5%87%86%EF%BC%88%E4%B8%89%E5%A4%A7%E7%B1%BB%EF%BC%9A%E5%86%9B%E5%B7%A5BM%E8%B5%84%E8%B4%A8%E3%80%81SM%E9%9B%86%E6%88%90%E8%B5%84%E8%B4%A8%E5%92%8C%E6%9C%BA%E5%85%B3%E5%8D%95%E4%BD%8D%E8%87%AA%E6%9F%A5%E8%87%AA%E8%AF%84%E5%B7%A5%E4%BD%9C%E5%AE%88%E5%88%99%EF%BC%89/"/>
       <url>/2022/04/26/%E5%9B%BD%E5%86%85%E7%8E%B0%E6%9C%89%E7%9A%84BM%E8%B5%84%E8%B4%A8%E6%88%96%E6%A0%87%E5%87%86%EF%BC%88%E4%B8%89%E5%A4%A7%E7%B1%BB%EF%BC%9A%E5%86%9B%E5%B7%A5BM%E8%B5%84%E8%B4%A8%E3%80%81SM%E9%9B%86%E6%88%90%E8%B5%84%E8%B4%A8%E5%92%8C%E6%9C%BA%E5%85%B3%E5%8D%95%E4%BD%8D%E8%87%AA%E6%9F%A5%E8%87%AA%E8%AF%84%E5%B7%A5%E4%BD%9C%E5%AE%88%E5%88%99%EF%BC%89/</url>
@@ -51,9 +78,9 @@
             
             <tag> Anomaly Detection </tag>
             
-            <tag> 机器学习 </tag>
-            
             <tag> ANN </tag>
+            
+            <tag> 机器学习 </tag>
             
         </tags>
       
@@ -80,9 +107,9 @@
             
             <tag> Anomaly Detection </tag>
             
-            <tag> CNN </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> CNN </tag>
             
         </tags>
       
