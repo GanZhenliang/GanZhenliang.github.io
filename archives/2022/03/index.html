@@ -20,7 +20,7 @@
   <meta content="Zhenliang&#39;Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1678172865288" as="style">
+  <link rel="preload" href="/css/style.css?time=1678182659685" as="style">
   <link rel="preload" href="/media/albb_font/otf/AlibabaPuHuiTi-2-55-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
 <link rel="preload" href="/media/albb_font/otf/AlibabaPuHuiTi-2-55-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
 
@@ -1082,7 +1082,8 @@ button {
   font-family: "albb_pht2.0", "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
-  height: 64px;
+  height: 48px;
+  margin: 8px;
 }
 .l_header .nav-sub {
   max-width: 1080px;
@@ -1790,8 +1791,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1678172865288" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1678172865288"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1678182659685" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1678182659685"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1868,9 +1869,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1678172865288","sites":"/js/plugins/sites.js?time=1678172865288","friends":"/js/plugins/friends.js?time=1678172865288","parallax":"/js/plugins/parallax.js?time=1678172865288","rightMenu":"/js/plugins/rightMenu.js?time=1678172865288","contributors":"/js/plugins/contributors.js?time=1678172865288","message":"/js/thirdparty/message.js?time=1678172865288","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1678172865288","search":"/js/search/hexo.js?time=1678172865288"},"css":{"style":"/css/style.css?time=1678172865288","message":"/css/message.css?time=1678172865288"}},
+    cdn: {"js":{"app":"/js/app.js?time=1678182659685","sites":"/js/plugins/sites.js?time=1678182659685","friends":"/js/plugins/friends.js?time=1678182659685","parallax":"/js/plugins/parallax.js?time=1678182659685","rightMenu":"/js/plugins/rightMenu.js?time=1678182659685","contributors":"/js/plugins/contributors.js?time=1678182659685","message":"/js/thirdparty/message.js?time=1678182659685","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1678182659685","search":"/js/search/hexo.js?time=1678182659685"},"css":{"style":"/css/style.css?time=1678182659685","message":"/css/message.css?time=1678182659685"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Mar 07 2023 15:07:45 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Tue Mar 07 2023 17:50:59 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","donate"],
       for_post: ["toc"],
@@ -2255,7 +2256,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicklove.js"></script>
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2402,7 +2403,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="不想搜索的程序猿不是好程序猿" />
+          <input type="text" class="input u-search-input" placeholder="搜索" />
         </form>
       </div>
       
@@ -2578,7 +2579,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
       }
       var l = "",
-      o = ["起风了，唯努力生存。","山有木兮木有枝，心悦君兮君不知。", "人生若只如初见","我的肩上是风，风上是闪烁的星群。","理想生活 需要一些热爱和心动。","一岁有一岁的味道，一站有一站的风景"].map(function (r) {
+      o = ["人生如逆旅，我亦是行人。", "疏影横斜水清浅，暗香浮动月黄昏。", "理想生活 需要一些热爱和心动。", "人生若只如初见","我的肩上是风，风上是闪烁的星群。","一岁有一岁的味道，一站有一站的风景"].map(function (r) {
       return r + ""
       }),
       a = 2,
@@ -3154,7 +3155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1678172865288.js"></script>
+<script src="/js/app.js?time=1678182659685.js"></script>
 
 
 
@@ -3271,7 +3272,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1678172865288')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1678182659685')</script>
 
 
 
@@ -3400,19 +3401,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1678172865288")
+        volantis.js("/js/plugins/sites.js?time=1678182659685")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1678172865288")
+        volantis.js("/js/plugins/friends.js?time=1678182659685")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1678172865288")
+        volantis.js("/js/plugins/contributors.js?time=1678182659685")
       }
     
   };
@@ -3525,7 +3526,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       VolantisFancyBox.bind('#valine_container .vcontent img:not(.vemoji)');
     }
   }
-  volantis.js('https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1678172865288').then(pjax_valine)
+  volantis.js('https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1678182659685').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3545,7 +3546,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1678172865288");
+    return volantis.js("/js/search/hexo.js?time=1678182659685");
   }
 
   function loadSearchService() {
@@ -3823,7 +3824,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let total = 27;
+  let total = 34;
   let index = Math.floor(Math.random() * total) + 1;
   let IntervalParallax = null;
  
@@ -3833,14 +3834,14 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       ParallaxWindow = document.querySelector("html");
     
     Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
+    Parallax.options.fade = 700;
     Parallax.cache = 1;
     next_parallax();
     Parallax.init();
     if (total>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '30000');
+      }, '7000');
     }
   }
  
@@ -3866,7 +3867,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1678172865288').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1678182659685').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{

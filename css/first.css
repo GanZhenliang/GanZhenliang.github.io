@@ -1038,7 +1038,8 @@ button {
   font-family: "albb_pht2.0", "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
-  height: 64px;
+  height: 48px;
+  margin: 8px;
 }
 .l_header .nav-sub {
   max-width: 1080px;
